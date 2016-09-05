@@ -24,7 +24,6 @@ angular.module('routes',['ngRoute'])
       })
   })
   .controller('ResourceController',function($location,$scope, icons) {
-    $scope.all_icons = icons.data;
     $scope.top_icons = [];
     $scope.bottom_icons = [];
     var num_icons = icons.data.length;
