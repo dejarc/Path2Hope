@@ -1,6 +1,5 @@
 angular.module('routes',['ngRoute'])
   .config(function($routeProvider) {
-    console.log('routeProvider is working');
     $routeProvider
       .when('/', {
         templateUrl:'templates/choose-resource.html',
@@ -19,6 +18,9 @@ angular.module('routes',['ngRoute'])
       .when('/subCategory/:service', {
         templateUrl:'templates/SelectSubCat.html',
         controller:'SubCatController'
+      })
+      .otherwise({
+        redirectTo: "/"
       })
   })
   .controller('ResourceController',function($location,$scope, icons) {
