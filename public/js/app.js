@@ -48,11 +48,8 @@ angular.module('routes',['ngRoute'])
       templateUrl:'templates/resources/resource-header.html',
       controller:function($scope) {
         var in_focus = false;
-        $scope.inFocus = function() {
-          in_focus = true;
-        };
-        $scope.notFocused = function() {
-          in_focus = false;
+        $scope.toggleFocus = function() {
+          in_focus ^= true;
         };
         $scope.isFocused = function() {
           return in_focus? "block":"none";
